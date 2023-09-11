@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Style+Script&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-color:#F4F4F4;
+}
+
+header{
+    margin:1em 3em 0 3em;
+    width:60%;
+    display:flex;
+    justify-content:space-between;
+}
+
+input{
+    margin-bottom:1em;
+    width:31em;
+    padding-top:0.7em;
+    padding-bottom:0.7em;
+    padding-left:1em;
+    border:none;
+    border-radius:0.5rem;
+    background-color:#EEEEEE;
+    color:#565656;
+    font-size:1.2rem;
+}
+
+.container{
+    display:flex;
+    position:relative;
+}
+
+a{
+    color:black;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.title{
+    font-family: 'Style Script', cursive;
+    font-size:2.5rem;
+}
+
+/* Sub */
+
+.shoes h1{
+    font-size:3rem;
+}
+
+.shoes h2{
+    font-size:2rem;
+    color:#5E5E5E;
+}
+
+.logo img{
+    margin-right:1.5em;
+}
+
+.sign-up h1{
+    font-size:4rem;
+    margin-bottom:1em;
+}
+
+.sign-up form{
+    display:flex;
+    flex-direction:column;
+}
+
+.sign-up-btn{
+    margin:1em 0;
+    padding:0.3em 0;
+    background-color:black;
+    color:white;
+    font-size:2rem;
+    border:2px solid transparent;
+    border-radius:0.5rem;
+    cursor:pointer;
+    transition: border 0.5s,
+                background-color 0.5s,
+                color 0.5s;
+}
+
+.hr-line img{
+    width:14.5em;
+    height:0.1em;
+}
+
+.sign-in-link p{
+    margin-right:0.5em;
+}
+
+/* Pseudoclases */
+
+a:hover{
+    text-decoration:underline;
+}
+
+.sign-up-btn:hover{
+    border:2px solid black;
+    background-color:#F4F4F4;
+    color:black;
+}
+
+.facebook-btn:hover{
+    background-color:#5375be;
+}
+
+.google-btn:hover{
+    background-color:#7fb9ff;
+}
+
+/* Clases */
+
+
+.shoes{
+    position:relative;
+}
+
+.shoes-img{
+    height:100vh;
+    z-index:-10;
+}
+
+.shoes-text{
+    position:absolute;
+    top:9em;
+    left:4.5em;
+}
+
+.logo{
+    display:flex;
+    align-items:flex-start;
+}
+
+.bi-list{
+    font-size:3rem;
+    color:black;
+    cursor:pointer;
+}
+
+.sign-up{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:11em;
+    right:16em;
+}
+
+.bi-person{
+    position:absolute;
+    left:0.8em;
+    bottom:15.5em;
+}
+
+.bi-lock-fill{
+    position:absolute;
+    left:0.8em;
+    bottom:11.2em;
+}
+
+.hr-line{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.social-media{
+    display:flex;
+    justify-content:center;
+}
+
+.social-media-btn{
+    width:7.5em;
+    margin:1em 1em;
+    padding:0.2em 1em;
+    border:2px solid transparent;
+    border-radius:0.5rem;
+    font-size:2rem;
+    color:white;
+    cursor:pointer;
+}
+
+.facebook-btn{
+    background-color:#3B5998;
+    transition: background-color 0.5s;
+}
+
+.google-btn{
+    background-color:#62A6FB;
+    transition: background-color 0.5s;
+}
+
+.fa-facebook-f, .bi-google{
+    padding-right:0.5em;
+}
+
+.sign-in-link{
+    display:flex;
+    justify-content:center;
+    margin-right:1em;
+}
