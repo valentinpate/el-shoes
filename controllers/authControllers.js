@@ -10,13 +10,31 @@ const dbConfig = {
 
 const connection = mysql.createConnection(dbConfig)
 
-module.exports.register_post=(req,res)=>{
+module.exports.register_post=async(req,res)=>{
     let emailAndPhone = req.body.emailPhone
     let name = req.body.name
     let password = req.body.password
 
-    if(!emailAndPhone, !name, !password){
-        res.sendFile("C:/Users/VP/Desktop/signup-shoes/public/no-data.html")
+    if(!emailAndPhone || !name || !password){
+        return res.sendFile("C:/Users/VP/Desktop/signup-shoes/public/no-data.html")
+    }
+
+    function verifica(emailOrPhone) {
+        return new Promise((resolve, reject) => {
+            connection.query('SELECT COUNT(*) AS count FROM login WHERE emailphone = ?', [emailOrPhone], (error, resultado) => {
+                if(error){
+                    res.send(error)
+                }else{
+                    resolve(resultado[0].count)
+                }
+            })
+        })
+    }
+
+    const emailCount = await verifica(emailAndPhone);
+
+    if (emailCount > 0) {
+        return res.sendFile("C:/Users/VP/Desktop/signup-shoes/public/used_email.html")
     }
 
     if(emailAndPhone && name && password){
